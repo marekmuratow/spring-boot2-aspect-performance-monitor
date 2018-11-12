@@ -1,4 +1,4 @@
-package com.example.demo;
+package pl.entito.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
