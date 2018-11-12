@@ -1,4 +1,4 @@
-package com.example.demo;
+package pl.entito.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -6,12 +6,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AopDemoApplication implements CommandLineRunner {
+public class Application implements CommandLineRunner {
 
-	private Greeter greeter;
+	private GreeterService greeter;
 
 	public static void main(String[] args) {
-		SpringApplication app = new SpringApplication(AopDemoApplication.class);
+		SpringApplication app = new SpringApplication(Application.class);
 		app.run(args);
 	}
 
@@ -22,10 +22,8 @@ public class AopDemoApplication implements CommandLineRunner {
 	}
 
 	@Autowired
-	public void setGreeter(Greeter greeter) {
+	public void setGreeter(GreeterService greeter) {
 		this.greeter = greeter;
 	}
-
-	
 
 }
